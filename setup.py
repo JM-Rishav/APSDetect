@@ -2,9 +2,9 @@ from __future__ import annotations
 from setuptools import find_packages, setup
 from typing import List
 def get_requirements() -> List[str]:
-    # Return an empty list of requirements
-    # requirement_list : List[str] = []
-    return []
+     #Return an empty list of requirements
+    requirement_list : List[str] = []
+    return requirement_list
 
 setup(
     name='sensor',

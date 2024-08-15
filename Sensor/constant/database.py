@@ -1,0 +1,2 @@
+DATABASE_NAME = "APSDetect"
+COLLECTION_NAME = "Sensor"

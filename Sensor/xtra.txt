@@ -1,0 +1,45 @@
+# to make package we make __init__.py file inside a folder
+whimsical.com -> you can use this site to make flowcharts for projects
+
+
+
+Input = Data ingestion config and MongoDB Database 
+Combines both and leads to give output = Data Ingestion Artifacts
+
+MongoDB : contains 4 files, never send .env file to git hub or any where
+    1. .env file -> contains url of MongoDB atlas
+    2. constant (env_variable file) -> to make variables 
+    3. configuration (MongoDB connection file) -> to make connection and client
+    4. data access (sensor_data file) -> to send data and to extract data from Database
+
+
+DATA_INGESTION : 
+purpose : make input usable for the next Component
+            1. collect data : collect data in actual format 
+            2. file, folder : store the data in files or folders
+            3. split : split the data into test , training
+            4. record data : agla Component ko jab jarurat pade uske liye record bana ke rakhte hain
+            5. sequencitial arrangement : sequence mai store karte hain 
+
+use ingestion configuration
+export data to feature folder
+ingestion folder, train, test, split
+connect all above function
+now we create a pipeline : we write the sequence in which things will be executed
+    take config for training
+
+For Data Ingestion to work we need 
+1. Constant folder : training-pipeline and init file
+        we use constant files to make entity.
+        what all things we need to be constant such as file names, target columns, model names etc.
+        we keep all those things here.
+2. Entity folder : config and Artifacts file
+        we use constants that were create in constant training folder file, import that 
+        to create folder and paths.
+
+3. Component folder : init, data_ingestion, data_transformation, data_validation, model_pusher, model_trainer
+                      model_validation files
+        
+        data_ingestion : 
+        we use the above constant and entity files and import those to data_ingestion files
+        we import MongoDB as well here for data ingestion
